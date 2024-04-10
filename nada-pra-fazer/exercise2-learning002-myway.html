@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colocando em pratica</title>
+
+    <style>
+        body {
+            background-color: black;
+            font: normal 18px Arial;
+        }            
+        .home {
+            display: flex;
+            position: absolute;
+            min-height: calc(100vh - 80px);
+        }
+        .home::after {
+            background-color: blue;
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(155deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .7) 35%, transparent 65%);
+
+        }
+        .home .imagem-fundo {
+            width: 100%;
+            object-fit: cover;
+        }
+        .titulo {
+            position: absolute;
+            height: 80px;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 80px;
+            color: tomato;
+        }
+        section {
+            color: rgba(0, 0, 0, 0.572);
+            position: absolute;
+            background: gray;
+            border-radius: 30px;
+            padding: 15px 20px;
+            width: 500px;
+            margin-top: 100px;
+            margin: 250px;
+            margin-left: 500px;
+            box-shadow: 5px 5px 10px rgba(197, 253, 85, 0.343);
+        }
+        footer {
+            color: rgb(224, 205, 202);
+            font-style: italic;
+            position: absolute;
+            margin-top: 580px;
+            margin-left: 670px;
+        }
+    </style>
+</head>
+<body>
+    <main class="home" id="home">
+        <img class="imagem-fundo" src="./img/image.png" alt="background">
+    </main>
+    <header>
+        <div class="titulo">
+        <h1>Brincando com programação</h1>
+        </div> 
+    </header>
+
+    <section>
+        <div>
+            Camarada
+        </div>
+        <div></div>
+    </section>
+
+    <footer>
+        <p>Treinando para o futuro</p>
+    </footer>
+    <script>
+
+    </script>
+</body>
+</html>

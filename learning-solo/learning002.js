@@ -101,44 +101,135 @@ Porem se quisermos criar um jeito que conseguimos ter varias funções e não po
 
 //Condições em JavaScript - Antes sabermos o que de fato é uma condição, precisamos saber que tudo o que ja vimos e fizemos foram sequencias, por exemplo:
 
-var n = 5
-n += 4
+var n = 5;
+n += 4;
 console.log(n);
 
-//Não se pode fugir desta ordem. Sendo assim, "Condição" é quando queremos que possa mostrar outra coisa dependendo do fator.: 
+//Não se pode fugir desta ordem. Sendo assim, "Condição" é quando queremos que possa mostrar outra coisa dependendo do fator.:
 //if(condição) {
 //  "bloco" -> true  (if = se sim)
 //} else {
 //  "bloco 2"  -> false  (else = se não)
 //}
 
-
-
-
 // Condições simples
-// if (condição) {
-//   "bloco" 
-//}
 
-var vel = 60.1
+var vel = 60.1;
 console.log(`a velocidade é ${vel}`);
-if (vel >60 ) {
-    console.log("velocidade muito alta, está multado");
+if (vel > 60) {
+  console.log("velocidade muito alta, está multado");
 }
 console.log("digira com atenção redobrada, boa viagem!");
 
 //Condições compostas -> exatamente a explicação acima da simples
 
-var pais = "EUA"
+var pais = "EUA";
 console.log(`vivendo em ${pais}`);
 if (pais != "Brasil") {
-    console.log("Estrangeira");
+  console.log("Estrangeira");
 } else {
-    console.log("Brasileira");
+  console.log("Brasileira");
 }
 
 //Condições Aninhadas
 
-//Condições Múltiplas
+var idade = 65;
+if (idade < 16) {
+  console.log("Não vota");
+} else {
+  if (idade >= 16 && idade < 18) { 
+    console.log("voto opcional");
+  } else {
+    if (idade >= 18 && idade < 65) {
+      console.log("voto obrigatorio");
+    } else {
+        if (idade >= 64) {
+            console.log("voto opcional");
+        }
+    }
+  }
+}
 
 
+// or 
+
+var idade = 65;
+if (idade < 16) {
+  console.log("Não vota");
+} else if (idade < 18 || idade > 64) { 
+    console.log("voto opcional");
+} else {
+    console.log("voto obrigatorio");
+}
+
+var agora = new Date()
+var hora = agora.getHours()
+var nome = "Victoria"
+console.log(`Agora são exatamente ${hora} horas`);
+if (hora < 12) {
+    console.log(`Bom dia, ${nome}`);
+} else if (hora < 18) {
+    console.log(`Boa tarde, ${nome}`);
+} else if (hora < 24) {
+    console.log(`Boa noite, ${nome}`);
+} 
+
+//Condições Múltiplas - O comando usado aqui é: 
+
+//switch (expressão) {
+//    case valor 1:
+//    "bloco"
+//    break
+//    case valor 2:
+//    "bloco"
+//    case valor 3:
+//    break
+//    default:
+//    break
+//}
+
+// default é como se fosse o "else"
+// break é uma regra e é obrigatorio nas case, menos no default mas podemos utilizado. Ele serve para saber oq foi pedido no switch já foi encontrado, tendo o break, ele fecha com o resultado, se não, é como se ele tivesse caçando o resultado ainda. - pesquisar
+
+var now = new Date()
+var diaSem = now.getDay()
+/*
+   0 - DOMINGO
+   1 - SEGUNDA
+   2 - TERÇA
+   3 - QUARTA 
+   4 - QUINTA 
+   5 - SEXTA 
+   6 - SABADO
+*/
+
+switch (diaSem) {
+    case 0: 
+        console.log('Hoje é Domingo');
+        break;
+    case 1:
+        console.log("Hoje é Segunda");
+        break
+    case 2: 
+        console.log(" Hoje é Terça");
+        break
+    case 3:
+        console.log("Hoje é Quarta");
+        break
+    case 4:
+        console.log("Hoje é Quinta");
+        break
+    case 5:
+        console.log("Hoje é Sexta");
+        break
+    case 6: 
+        console.log("Hoje é Sabado");
+        break
+    default:
+        console.log("Dia invalido, algum erro aconteceu");
+        break;
+} 
+
+
+
+// O switch é bom para dados pontuais: funciona com numeros e string

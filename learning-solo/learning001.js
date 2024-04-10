@@ -111,11 +111,12 @@ console.log(resultadoFalso);
 //- Null: Absolutamente nada
 
 var vazio = null;
-console.log(null);
+console.log(vazio);
 
 //- Undefined: Indefinido
 
-console.log(undefined);
+var indefinição
+console.log(indefinição);
 
 //- Object: {}, [] - O "{}" Serve para adicionar mais de um dado para uma unica variavel
 
