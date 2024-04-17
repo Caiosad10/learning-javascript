@@ -80,6 +80,10 @@
             box-shadow: 5px 2px 10px rgba(197, 253, 85, 0.343);
             margin-top: 360px;
         }
+        a {
+            text-decoration: none;
+            color: rgb(198, 152, 144);;
+        }
       
     </style>
 </head>
@@ -94,22 +98,30 @@
     </header>
     <section>
         <div>
-            Faria programa comigo? 
+            Indicaria este nobre querido amigo para a empresa internacional <strong>Microsoft</strong>?
         </div>
     </section>
     <div class="buttom">
         <button>
-            <a>Sim</a>
+            <a href="https://www.youtube.com/watch?v=Nk7KxJMlzwk">Sim</a>
         </button>
-        <button>
-            <a>Claro que sim</a>
+        <button id="no">
+            <a>Não</a>
         </button>
     </div>
     <footer>
         <p>Apenas um Garoto de Programa</p>
     </footer>
     <script>
+        let button = document.getElementById('no');
+        let height = window.innerHeight - 60;
+        let width = window.innerWidth - 50;
 
+        button.addEventListener('mouseover', function () {
+            button.style.position = "absolute";
+            button.style.top = Math.random() * height + "px";
+            button.style.left = Math.random() * width + "px";
+        })
     </script>
 </body>
 </html>

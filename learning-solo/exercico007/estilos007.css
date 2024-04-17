@@ -1,0 +1,55 @@
+* {
+  font: normal 18px Arial;
+}
+
+body {
+  background: gray;
+}
+
+header {
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+section {
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.439);
+}
+
+.field {
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px rgba(234, 15, 15, 0.815);
+}
+
+.add {
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px rgba(234, 15, 15, 0.815);
+}
+
+.finish {
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-top: 20px;
+
+  box-shadow: 5px 5px 10px rgba(234, 15, 15, 0.815);
+}
+
+select {
+  box-shadow: 5px 5px 10px rgba(139, 15, 234, 0.815);
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+}
